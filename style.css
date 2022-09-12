@@ -1,0 +1,212 @@
+*{
+  margin: 0;
+  
+}
+body{
+  background-image: url(images/Clean-white-desk-stock-image-e1532404706576.jpg);
+  background-size: cover;
+  color: #f1faee;
+  font-size: 1.25rem;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-right: 1000px;
+  height: 100vh;
+  min-width: 50%;
+}
+
+#list{
+  border-radius: .5rem .5rem 0 0;
+  text-align: left; 
+  background-color: rgb(65, 146, 149);
+  box-shadow: 20px 20px 10px rgb(45, 35, 35);
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: .5rem .5rem 0 0;
+  background-color: darkcyan;
+  font-family: sans-serif;
+  border-top: 4px solid #262e4c;
+  font-variant: small-caps;
+}
+
+/* First letter - Selects the first letter of each element
+h1::first-letter{
+  color: darkorange;
+  font-size: 100px;
+  margin: 1px;
+  font-style: italic;
+  background-color: #262e4c;
+  padding: 1px;
+  padding-bottom: 2px;
+} */
+
+h1::before {
+  content: "M";
+  color: darkorange;
+  font-size: 100px;
+  margin: 1px;
+  font-style: italic;
+  background-color: #262e4c;
+  padding: 1px;
+  padding-bottom: 2px;
+  }
+  
+
+/*Text - My to do list */
+#text {
+  animation: 2s slide-right;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+/*The @keyframes rule specifies the animation code.
+Slide from left */
+@keyframes slide-right {
+   from {
+      margin-right: -500px;
+   }
+   
+   to {
+      margin-right: 0%;
+   }
+  }
+
+/*Style the placeholder text in an 
+<input> form element. */
+::placeholder {
+  color:#262e4c;
+  font-size: 1rem;
+  text-align: left;
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+.placeholder{
+  margin: 25px 400px 5px 400px;
+}
+
+/*input + btnAdd*/
+#todo-input{
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+/*Add new task...*/
+#input{
+  padding: 0px 200px 0 10px;
+  background-color:rgb(137, 186, 188);
+  color:#262e4c;
+  font-size: 1rem;
+  border: none;
+  animation: 2s slide-right;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+/*The @keyframes rule specifies the animation code.
+Slide from right */
+@keyframes slide-right {
+   from {
+      margin-left: -500px;
+   }
+   
+   to {
+      margin-left: 0%;
+   }
+}
+
+/*Button*/
+#btnAdd {
+  padding: 0px 15px 3px 15px;
+  margin: 0;
+  color: darkorange;
+  border: 1px solid white;
+  font-size: 20px;
+  font-variant: small-caps;
+  height: 50px;
+  text-align: center;
+  background-color: #262e4c;
+}
+
+/*Select and style the active link*/
+#btnAdd:active {
+	background-color: darkcyan;
+/*move an element along Y-axis only*/
+	transform: translateY(2px);
+}
+
+/*The ::after selector 
+inserts something after the content of 
+each selected element.*/
+#btnAdd::after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
+}
+
+/*changing color when clicked*/
+#btnAdd:hover {
+  background-color: darkorange;
+  color:#262e4c;
+  cursor: pointer;
+}
+
+li{
+  cursor: pointer;
+  list-style: square;
+  padding: 10px;
+  color:#262e4c;
+  border-bottom: 1px solid white;
+}
+
+/*Changing color when you mouse over it:*/
+li:hover{
+    background-color:rgb(107, 172, 177);
+    color:#262e4c;
+}
+
+/*Delete button - trash-icon*/
+span{
+  float: right;
+  cursor: pointer;
+  color: #262e4c;
+  padding: 5px;
+}
+
+/*Changing color when you mouse over the trash-icon*/
+span:hover{
+color: white;
+}
+
+/*Select and style the trash-icon*/
+span:active {
+	background-color: #262e4c;
+  color:darkorange;
+	transform: translateY(2px);
+}
+  
+/*The ::after selector 
+inserts something after the content of 
+each selected element.*/
+  span:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
+}
+
+/*line-through the li text*/
+.strikethrough {
+  text-decoration: line-through;
+  color: rgb(209, 194, 194);
+}
